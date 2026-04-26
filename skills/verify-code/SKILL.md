@@ -27,11 +27,7 @@ git diff --name-only HEAD
 
 변경된 파일 목록을 기준으로 해당 패키지/앱을 특정한다.
 
-### 2. Prettier
-
-변경된 파일에 prettier를 실행한다.
-
-### 3. TypeScript 타입 체크
+### 2. TypeScript 타입 체크
 
 변경된 파일이 속한 프로젝트의 `tsconfig.json`을 찾아 실행:
 
@@ -41,7 +37,7 @@ npx tsc --noEmit --pretty --project <tsconfig-path>
 
 에러가 있으면 수정 후 재실행, 통과할 때까지 반복한다.
 
-### 4. Lint
+### 3. Lint
 
 변경된 파일이 속한 패키지의 lint 명령어를 실행:
 
@@ -52,7 +48,7 @@ pnpm --filter <package-name> lint
 - Error만 수정 대상 (Warning 무시)
 - 변경한 파일에서 발생한 에러만 수정
 
-### 5. Test (해당 시)
+### 4. Test (해당 시)
 
 변경된 파일에 대응하는 `.spec.ts`/`.test.ts`가 있으면 실행:
 
@@ -62,7 +58,7 @@ pnpm --filter <package-name> test -- --run <test-file-pattern>
 
 테스트 파일이 없으면 건너뛴다.
 
-### 6. 완료 보고
+### 5. 완료 보고
 
 모든 검증을 통과하면 결과를 요약:
 
