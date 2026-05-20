@@ -87,5 +87,6 @@
     "playwright@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "language": "한국어"
 }
